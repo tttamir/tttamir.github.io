@@ -1,0 +1,74 @@
+/* Задание фона и общие настройки */
+body {
+    background-color: #f0f0f0; /* цвет фона */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Центрирование и ширина контента */
+body > * {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Стили для списка фильмов */
+.films-list {
+    list-style-type: none; /* убираем маркеры списка */
+    padding: 0;
+}
+
+.films-list li a {
+    color: black; /* черный цвет для ссылок */
+    text-decoration: none; /* убираем подчеркивание */
+}
+
+/* Шрифты для описания фильмов */
+@font-face {
+    font-family: 'CustomFont1';
+    src: url('fonts/customfont1.ttf');
+}
+
+@font-face {
+    font-family: 'CustomFont2';
+    src: url('fonts/customfont2.ttf');
+}
+
+@font-face {
+    font-family: 'CustomFont3';
+    src: url('fonts/customfont3.ttf');
+}
+
+.description1 {
+    text-align: center; /* выравнивание по центру */
+    font-family: 'CustomFont1';
+}
+
+.description2 {
+    text-align: justify; /* выравнивание по ширине */
+    font-family: 'CustomFont2';
+}
+
+.description3 {
+    text-align: left; /* выравнивание по левому краю */
+    font-family: 'CustomFont3';
+}
+
+/* Изображения одного размера и закругленные края */
+.film-image {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px; /* радиус закругления */
+}
+
+/* Таблицы */
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
