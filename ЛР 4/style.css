@@ -1,0 +1,102 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: rgb(52, 206, 142);
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+}
+
+/* Вибрация кнопки */
+button {
+    margin: 50px;
+    font-size: 20px;
+    background-color: red;
+    animation: vibrate 0.1s infinite;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+}
+
+/* Остановка вибрации и смена цвета при наведении */
+button:hover {
+    animation: none;
+    background-color: green;
+}
+
+/* Вибрация (быстрое перемещение с небольшой амплитудой) */
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Стили для ссылки */
+a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+/* При наведении: цвет меняется на зеленый, появляется подчеркивание */
+a:hover {
+    color: green;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: green;
+    transition: width 0.5s, left 0.5s;
+}
+
+a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+/* Анимация падения мячика */
+@keyframes fall {
+    0% {
+        top: 0;
+        transform: scale(1, 1);
+    }
+    50% {
+        top: 90%;
+        transform: scale(1.1, 0.9);
+    }
+    100% {
+        top: 50%;
+        transform: scale(1, 1);
+    }
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    animation: fall 1s ease-in-out infinite;
+}

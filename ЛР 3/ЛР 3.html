@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета для вступления в клуб любителей белой кожуры от лимона</title>
+</head>
+<body>
+
+    <h1>Анкета для вступления в клуб любителей белой кожуры от лимона</h1>
+
+    <form action="/submit-form" method="post">
+        <!-- Личные данные -->
+        <fieldset>
+            <legend>Ваши данные</legend>
+
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Ваш email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Ваш телефон:</label>
+            <input type="tel" id="phone" name="phone"><br><br>
+
+            <label for="password">Придумайте пароль (для доступа к секретным рецептам):</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+        </fieldset>
+
+        <!-- Время поедания лимонной кожуры -->
+        <fieldset>
+            <legend>Предпочитаемое время для поедания лимонной кожуры</legend>
+
+            <label for="morning">Утро (кожа должна быть свежей)</label>
+            <input type="radio" id="morning" name="time" value="morning">
+
+            <label for="afternoon">День (идеально для перекуса)</label>
+            <input type="radio" id="afternoon" name="time" value="afternoon">
+
+            <label for="evening">Вечер (для истинных гурманов)</label>
+            <input type="radio" id="evening" name="time" value="evening"><br><br>
+
+        </fieldset>
+
+        <!-- Инструменты для чистки лимонов -->
+        <fieldset>
+            <legend>Какие инструменты вы используете для чистки лимонов?</legend>
+
+            <label for="tool1">Голыми руками</label>
+            <input type="checkbox" id="tool1" name="tools" value="bare-hands">
+
+            <label for="tool2">Нож</label>
+            <input type="checkbox" id="tool2" name="tools" value="knife">
+
+            <label for="tool3">Зубы</label>
+            <input type="checkbox" id="tool3" name="tools" value="teeth"><br><br>
+
+        </fieldset>
+
+        <!-- Загрузка файла с фото лимона -->
+        <fieldset>
+            <legend>Загрузите фото вашего лимона</legend>
+
+            <label for="avatar">Выберите файл:</label>
+            <input type="file" id="avatar" name="avatar"><br><br>
+
+        </fieldset>
+
+        <!-- Управление формой -->
+        <input type="submit" value="Вступить в клуб">
+        <input type="reset" value="Очистить форму">
+
+    </form>
+
+</body>
+</html>
